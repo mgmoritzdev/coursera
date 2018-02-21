@@ -1,0 +1,7 @@
+:base-url = http://localhost:3000
+
+# index
+GET :base-url/index.html
+
+# about
+GET :base-url/about.html
