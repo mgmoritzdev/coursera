@@ -1,0 +1,56 @@
+:base-url = http://localhost:3000
+
+# index
+GET :base-url/index.html
+
+# about
+GET :base-url/about.html
+
+# GET /dishes
+GET :base-url/dishes
+
+# POST /dishes
+POST :base-url/dishes
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# PUT /dishes
+PUT :base-url/dishes
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# DELETE /dishes
+DELETE :base-url/dishes
+
+:dishId = 23
+# GET /dishes/:dishId
+GET :base-url/dishes/:dishId
+
+# POST /dishes/:dishId
+POST :base-url/dishes/:dishId
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# PUT /dishes/:dishId
+PUT :base-url/dishes/:dishId
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# DELETE /dishes/:dishId
+DELETE :base-url/dishes/:dishId
