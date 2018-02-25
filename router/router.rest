@@ -30,27 +30,27 @@ Content-Type: application/json
 # DELETE /dishes
 DELETE :base-url/dishes
 
-# :dishId = 23
-# # GET /dishes/:dishId
-# GET :base-url/dishes/:dishId
+:dishId = 23
+# GET /dishes/:dishId
+GET :base-url/dishes/:dishId
 
-# # POST /dishes/:dishId
-# POST :base-url/dishes/:dishId
-# Content-Type: application/json
+# POST /dishes/:dishId
+POST :base-url/dishes/:dishId
+Content-Type: application/json
 
-# {
-#   "name": "shit",
-#   "description": "shit"
-# }
+{
+  "name": "shit",
+  "description": "shit"
+}
 
-# # PUT /dishes/:dishId
-# PUT :base-url/dishes/:dishId
-# Content-Type: application/json
+# PUT /dishes/:dishId
+PUT :base-url/dishes/:dishId
+Content-Type: application/json
 
-# {
-#   "name": "shit",
-#   "description": "shit"
-# }
+{
+  "name": "shit",
+  "description": "big shit"
+}
 
-# # DELETE /dishes/:dishId
-# DELETE :base-url/dishes/:dishId
+# DELETE /dishes/:dishId
+DELETE :base-url/dishes/:dishId
