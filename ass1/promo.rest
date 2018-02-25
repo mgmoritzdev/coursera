@@ -1,0 +1,50 @@
+:base-url = http://localhost:3000
+
+# GET /promotions
+GET :base-url/promotions
+
+# POST /promotions
+POST :base-url/promotions
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# PUT /promotions
+PUT :base-url/promotions
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# DELETE /promotions
+DELETE :base-url/promotions
+
+:promoId = 23
+# GET /promotions/:promoId
+GET :base-url/promotions/:promoId
+
+# POST /promotions/:promoId
+POST :base-url/promotions/:promoId
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# PUT /promotions/:promoId
+PUT :base-url/promotions/:promoId
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "big shit"
+}
+
+# DELETE /promotions/:promoId
+DELETE :base-url/promotions/:promoId

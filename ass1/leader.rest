@@ -1,0 +1,50 @@
+:base-url = http://localhost:3000
+
+# GET /leaders
+GET :base-url/leaders
+
+# POST /leaders
+POST :base-url/leaders
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# PUT /leaders
+PUT :base-url/leaders
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# DELETE /leaders
+DELETE :base-url/leaders
+
+:leaderId = 23
+# GET /leaders/:leaderId
+GET :base-url/leaders/:leaderId
+
+# POST /leaders/:leaderId
+POST :base-url/leaders/:leaderId
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "shit"
+}
+
+# PUT /leaders/:leaderId
+PUT :base-url/leaders/:leaderId
+Content-Type: application/json
+
+{
+  "name": "shit",
+  "description": "big shit"
+}
+
+# DELETE /leaders/:leaderId
+DELETE :base-url/leaders/:leaderId
