@@ -1,0 +1,28 @@
+{
+  "dishes": [
+    {
+      "name": "pizzaria",
+      "image": "images/pizzaria.png",
+      "category": "pizzarias",
+      "label": "Hot",
+      "price": "4.99",
+      "featured": "true",
+      "description": "Sells pizza",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "good",
+          "author": "John Smith",
+          "date": "2018-03-01T09:00:35.112Z"
+        },
+        {
+          "rating": 1,
+          "comment": "bad",
+          "author": "Eddie Longman",
+          "date": "2018-03-01T09:00:35.112Z"
+
+        }
+      ]
+    }
+  ]
+}
