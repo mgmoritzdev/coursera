@@ -8,8 +8,8 @@ POST :base-url/dishes
 Content-Type: application/json
 
 {
-  "name": "shit",
-  "description": "shit"
+  "name": "balakas",
+  "description": "best balakas in the world"
 }
 
 # PUT /dishes
@@ -24,7 +24,7 @@ Content-Type: application/json
 # DELETE /dishes
 DELETE :base-url/dishes
 
-:dishId = 23
+:dishId = 5a9e7d7d2e20ba382fa1fdf4
 # GET /dishes/:dishId
 GET :base-url/dishes/:dishId
 
@@ -42,8 +42,7 @@ PUT :base-url/dishes/:dishId
 Content-Type: application/json
 
 {
-  "name": "shit",
-  "description": "big shit"
+  "description": "updated balakas"
 }
 
 # DELETE /dishes/:dishId
