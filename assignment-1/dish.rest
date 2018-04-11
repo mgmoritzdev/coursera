@@ -24,7 +24,7 @@ Content-Type: application/json
 # DELETE /dishes
 DELETE :base-url/dishes
 
-:dishId = 5a9e7d7d2e20ba382fa1fdf4
+:dishId = 5a9e7d8d2e20ba382fa1fdf5
 # GET /dishes/:dishId
 GET :base-url/dishes/:dishId
 
@@ -47,3 +47,30 @@ Content-Type: application/json
 
 # DELETE /dishes/:dishId
 DELETE :base-url/dishes/:dishId
+
+
+### Comments
+
+# GET /dishes/:dishId/comments
+GET :base-url/dishes/:dishId/comments
+
+# POST /dishes/:dishId/comments
+POST :base-url/dishes/:dishId/comments
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "comment": "shit",
+  "author": "Me"
+}
+
+# PUT /dishes/:dishId/comments
+PUT :base-url/dishes/:dishId/comments
+Content-Type: application/json
+
+{
+  "description": "updated balakas"
+}
+
+# DELETE /dishes/:dishId/comments
+DELETE :base-url/dishes/:dishId/comments

@@ -74,4 +74,53 @@ dishRouter.route('/:dishId')
       .catch((err) => next(err));
   });
 
+dishRouter.route('/:dishId/comments')
+  .all((req, res, next) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    next();
+  })
+  .get((req, res, next) => {
+    Dishes
+      .findById(req.params.dishId)
+      .then((dish) => {
+        res.json(dish.comments);
+      }, (err) => next(err))
+      .catch((err) => next(err));
+  })
+  .post((req, res, next) => {
+    const {rating, comment, author}  = req.body;
+    const newComment = {
+      rating,
+      comment,
+      author
+    };
+    Dishes
+      .findById(req.params.dishId)
+      .then((dish) => {
+        dish.comments.push(newComment);
+        return dish.save();
+      }, (err) => next(err))
+      .then((dish) => {
+        res.json(newComment);
+      }, (err) => next(err))
+      .catch((err) => next(err));
+  })
+  .put((req, res, next) => {
+    res.statusCode = 403;
+    res.end('PUT operation not supported /dishes/:dishId/comments');
+  })
+  .delete((req, res, next) => {
+    Dishes
+      .findById(req.params.dishId)
+      .then((dish) => {
+        dish.comments = [];
+        dish.save();
+      }, (err) => next(err))
+      .then((dish) => {
+        res.json(dish);
+      }, (err) => next(err))
+      .catch((err) => next(err));
+  });
+
 module.exports = dishRouter;
