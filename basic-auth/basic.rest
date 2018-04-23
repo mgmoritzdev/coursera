@@ -1,0 +1,9 @@
+:base-url = http://localhost:3000
+
+:token := (base64-encode-string "username:password")
+
+# GET /
+GET :base-url
+Authorization: Basic :token
+
+#
