@@ -1,0 +1,30 @@
+:base-url = http://localhost:3000
+
+:username = moritz
+:password = 123
+:token := (base64-encode-string "moritz:123")
+
+# *** UNAUTHENTICATED ROUTES ***
+# GET /
+GET :base-url
+
+# POST /users/signup
+POST :base-url/users/signup
+Content-Type: application/json
+
+{
+  "username": ":username",
+  "password": ":password"
+}
+
+# POST /users/login
+POST :base-url/users/login
+Authorization: Bearer :token
+
+
+# GET /users/logout
+GET :base-url/users/logout
+
+# *** AUTHENTICATED ROUTES ***
+# GET /dishes
+GET :base-url/dishes
