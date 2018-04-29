@@ -1,0 +1,9 @@
+:base-url = http://localhost:3000
+
+:token := (base64-encode-string "username:password")
+
+# GET /
+GET :base-url
+Authorization: Basic :token
+
+# Cookie: user=s%3Auser.d%2FNpUIsAEq85S0uANa%2F6WAIblzCN5tH%2FGr0xFxjIT4w;
